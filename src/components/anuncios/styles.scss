@@ -1,0 +1,7 @@
+// mobile-style
+@media screen and (max-width: 1000px) {
+  .airbnb-images-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}

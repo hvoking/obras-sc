@@ -1,11 +1,14 @@
 // App imports
-import { Main } from './components';
+import { AppRoutes } from './routes';
+import { MainProvider } from './components/mapas/context';
 import './styles.scss';
 
 export const App = () => {
   return (
-    <div className="App">
-      <Main/>
-    </div>
+    <MainProvider>
+      <div className="App">
+        <AppRoutes/>
+      </div>
+    </MainProvider>
   );
 }
