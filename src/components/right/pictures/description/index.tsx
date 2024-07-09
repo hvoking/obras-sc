@@ -18,8 +18,9 @@ export const Description = ({ item, setCurrentId }: any) => {
 			onMouseOut={() => setCurrentId(null)}
 		>
 			<div className="pictures-description">
-				<div className="cod-wrapper">
-					Código: {item.codigo}
+				<div className="referencia">
+					<i className="icon tag"></i>
+					<span>{item.codigo}</span>
 				</div>
 				<div className="description-title">
 					{item.nome}

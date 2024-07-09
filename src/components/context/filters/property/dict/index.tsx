@@ -68,19 +68,6 @@ export const propertyDict: any = [
 		link: "https://www.acrcimoveis.com.br/comprar/sc/blumenau/ponta-aguda/apartamento/33367045",
 	},
 	{
-		codigo: "AP02942",
-		nome: "VORSTADT - BLUMENAU/SC",
-		valorVenda: "3380000",
-		imgUrl: "https://cdnuso.com/14425/2022/11/affb7ac372928f00e3a4695189abe7b3.jpg",
-		coordinates: "-26.898947809255755, -49.04225760956934",
-		dormitorios: "4",
-		suites: "4",
-		vagas: "4",
-		areaTotal: "949",
-		areaUtil: "714",
-		link: "https://www.acrcimoveis.com.br/comprar/sc/blumenau/vorstadt/apartamento/34475418"
-	},
-	{
 		codigo: "AP06686",
 		nome: "VIKTOR KONDER - BLUMENAU/SC",
 		valorVenda: "2990000",
