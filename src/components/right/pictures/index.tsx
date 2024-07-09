@@ -30,7 +30,6 @@ export const Pictures = () => {
 											item.disponivel === "1" ?
 											"rgba(102, 187, 106, 1)" :
 											"rgba(255, 193, 7, 1)", 
-										borderRadius: "10px 0 0 10px"
 
 								}}></div>
 								<img 
@@ -39,7 +38,7 @@ export const Pictures = () => {
 									alt="property"
 									width="120"
 									height="80"
-									style={{padding: "5px", borderRadius: "10px"}}
+									style={{padding: "5px"}}
 								/>
 								<Description item={item} setCurrentId={setCurrentId}/>
 							</div>

@@ -48,11 +48,11 @@ export const IconLayerProvider = ({children}: any) => {
 				d.codigo === currentId ?
 				"marker-red" :
 				d.disponivel === "1" ?
-				"marker-green" :
-				"marker-yellow",
-			getSize: (d: any) => 40,
+				"marker-yellow" :
+				"marker-green",
+			getSize: (d: any) => 100,
 			sizeUnits: 'meters',
-			sizeScale: 20,
+			sizeScale: 1,
 			sizeMinPixels: 30,
 			onHover,
 		    onClick: (info: any) => onClick(info),
