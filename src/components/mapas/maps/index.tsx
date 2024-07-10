@@ -4,11 +4,13 @@ import { useCallback } from 'react';
 // App imports
 import { Controllers } from './controllers';
 import { Tooltip } from './tooltip';
+import { Search } from './search';
 import './styles.scss';
 
 // Context imports
 import { useMapbox } from '../context/mapbox';
 import { useGeo } from '../context/filters/geo';
+
 // Layers imports
 import { useIconLayer } from '../context/maps/layers/icon';
 
@@ -51,6 +53,7 @@ export const MapContainer = () => {
 				preserveDrawingBuffer={true}
 			>
 				<DeckGLOverlay layers={layers} glOptions={{preserveDrawingBuffer: true}}/>
+				<Search/>
 				<Tooltip/>
 				<Controllers/>
 			</Map>

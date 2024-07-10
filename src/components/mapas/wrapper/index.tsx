@@ -1,4 +1,5 @@
 // App imports
+import { Arrow } from './arrow';
 import './styles.scss';
 
 // Third-party imports
@@ -23,10 +24,7 @@ export const Wrapper = ({children}: any) => {
 				</div>
 				<div className="obras-sc-subtitle" onClick={() => navigate("/")}>
 					<div>ver imóveis</div>
-					<div style={{width: "15px", display: "grid", gridTemplateColumns: "10px 5px"}}>
-						<div className="header-arrow-line"></div>
-						<div className="header-arrow-right"></div>
-					</div>
+					<Arrow/>
 				</div>
 			</div>
 			{children}

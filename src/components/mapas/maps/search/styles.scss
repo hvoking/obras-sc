@@ -1,0 +1,41 @@
+.obras-sc-search-wrapper {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  background-color: rgba(241, 241, 243, 1);
+  font-size: 16px;
+  padding-left: 10px;
+}
+.obras-sc-search {
+  display: grid;
+  height: 30px;
+  grid-template-columns: min-content auto min-content;
+  position: relative;
+  border-radius: 5px;
+  align-items: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.maps-input {
+  border: none;
+  font-size: 1em;
+}
+.maps-input:focus {
+  outline: none;
+}
+.cancel-cross-wrapper {
+  width: 30px;
+  display: grid;
+}
+.cancel-cross {
+  width: 15px;
+  cursor: pointer;
+  align-self: center;
+  justify-self: center;
+}
+.header-search-icon {
+  cursor: pointer;
+  height: 20px;
+  align-self: center;
+  padding-right: 10px;
+}
