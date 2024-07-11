@@ -14,3 +14,17 @@
 .stats-title {
 	font-size: 1.4em;
 }
+.property-parameters {
+	padding-top: 10px;
+	display: grid;
+	width: 100%;
+	gap: 10px;
+	font-size: 0.8em;
+}
+.property-parameter {
+	align-items: center;
+	white-space: nowrap;
+	display: flex;
+	gap: 3px;
+	justify-content: space-between;
+}
