@@ -1,21 +1,21 @@
 // App imports
-import { Dropdown } from './dropdown';
 import { Rooms } from './rooms';
+import { Dropdown } from './dropdown';
 import './styles.scss';
 
 // Context imports
 import { useProperty } from '../../../mapas/context/filters/property';
 
 export const Filters = () => {
-	const { propertyName, businessName, setBusinessTypeId, setPropertyTypeId, propertyTypeDict, businessTypeDict } = useProperty();
-	
+	const  { propertyName, businessName, setBusinessTypeId, setPropertyTypeId, propertyTypeDict, businessTypeDict } = useProperty();
+
 	return (
-		<div className="samples-header">
-			<div className="anuncios-filters-wrapper">
+		<div className="anuncios-filters-wrapper">
+			<div className="stats">
 				<div className="stats-title">Filtros</div>
-				<div className="filters-wrapper-wrapper">
-					<div className="filters-wrapper">
-						<div className="anuncios-property-parameter">
+				<div className="property-parameters">
+					<div style={{display: "flex", justifyContent: "space-between"}}>
+						<div className="property-parameter">
 							<div>Tipo:</div>
 							<Dropdown
 								imoveisDict={propertyTypeDict}
@@ -23,7 +23,7 @@ export const Filters = () => {
 								setPropertyTypeId={setPropertyTypeId}
 							/>
 						</div>
-						<div className="anuncios-property-parameter">
+						<div className="property-parameter">
 							<div>Negócio:</div>
 							<Dropdown
 								imoveisDict={businessTypeDict}

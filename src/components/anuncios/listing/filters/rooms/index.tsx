@@ -1,11 +1,11 @@
-// Context imports
-import { useProperty } from '../../../../mapas/context/filters/property';
-
 // App imports
 import './styles.scss';
 
+// Context imports
+import { useProperty } from '../../../../mapas/context/filters/property';
+
 export const Rooms = () => {
-	const { 
+	const {
 		rooms, setRooms,
 		suites, setSuites,
 		garages, setGarages
@@ -13,7 +13,7 @@ export const Rooms = () => {
 
 	return (
 		<div className="property-parameter">
-			<div className="input-group-wrapper">
+			<div className="input-group-wrapper" style={{justifyContent: "space-between"}}>
 				<div>Dormitórios</div>
 				<input 
 					className="input-group" 
