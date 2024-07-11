@@ -5,7 +5,7 @@ import './styles.scss';
 // Context imports
 import { useProperty } from '../../context/filters/property';
 
-export const Pictures = () => {
+export const Anuncios = () => {
 	const { currentId, setCurrentId, propertyDict } = useProperty();
 
 	return (
@@ -42,4 +42,4 @@ export const Pictures = () => {
 	)
 }
 
-Pictures.displayName="Pictures";
+Anuncios.displayName="Anuncios";

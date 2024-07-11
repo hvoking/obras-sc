@@ -1,6 +1,3 @@
-// React imports
-import { useState, useEffect } from 'react';
-
 // App imports
 import { Header } from './header';
 import { Pictures } from './pictures';
@@ -11,7 +8,7 @@ import './styles.scss';
 import { useProperty } from '../../mapas/context/filters/property';
 
 export const Listing = () => {
-	const { currentId, setCurrentId, propertyDict } = useProperty();
+	const { setCurrentId, propertyDict } = useProperty();
 
 	const onMouseOver = (e: any, item: any) => {
 		setCurrentId(item.codigo);

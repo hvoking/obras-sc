@@ -1,6 +1,6 @@
 // App imports
 import { Filters } from './filters';
-import { Pictures } from './pictures'
+import { Anuncios } from './anuncios'
 import './styles.scss';
 
 export const Right = () => {
@@ -10,7 +10,7 @@ export const Right = () => {
 			<div className="property-list-wrapper">
 				<div className="property-list-title">Listagem de imóveis</div>
 			</div>
-			<Pictures/>
+			<Anuncios/>
 		</div>
 	)
 }

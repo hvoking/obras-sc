@@ -1,27 +1,15 @@
-// React imports
-import { useState } from 'react';
-
 // App imports
 import { Rooms } from './rooms';
 import { Dropdown } from './dropdown';
 import './styles.scss';
 
+// Context imports
+import { useProperty } from '../../../../../mapas/context/filters/property';
+
 export const Property = () => {
-	const [ propertyName, setPropertyName ] = useState("apto");
-	const [ businessName, setBusinessName ] = useState("venda");
-
-	const [ businessTypeId, setBusinessTypeId ] = useState(1);
-	const [ propertyTypeId, setPropertyTypeId ] = useState(1);
-
-	const propertyDict: any = {
-		1: "apto",
-		2: "casa",
-	}
-
-	const businessDict: any = {
-		1: "venda",
-		2: "locação",
-	}
+	const {
+		propertyName, businessName, setBusinessTypeId, setPropertyTypeId, propertyTypeDict, businessTypeDict
+	} = useProperty();
 
 	return (
 			<div className="filters-wrapper-wrapper">
@@ -29,7 +17,7 @@ export const Property = () => {
 					<div className="anuncios-property-parameter">
 						<div>Tipo:</div>
 						<Dropdown
-							imoveisDict={propertyDict}
+							imoveisDict={propertyTypeDict}
 							propertyName={propertyName}
 							setPropertyTypeId={setPropertyTypeId}
 						/>
@@ -37,7 +25,7 @@ export const Property = () => {
 					<div className="anuncios-property-parameter">
 						<div>Negócio:</div>
 						<Dropdown
-							imoveisDict={businessDict}
+							imoveisDict={businessTypeDict}
 							propertyName={businessName}
 							setPropertyTypeId={setBusinessTypeId}
 						/>

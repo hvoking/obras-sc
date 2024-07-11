@@ -6,12 +6,16 @@ import { Rooms } from './rooms';
 import { Dropdown } from './dropdown';
 import './styles.scss';
 
-export const Property = () => {
-	const [ propertyName, setPropertyName ] = useState("apto");
-	const [ businessName, setBusinessName ] = useState("venda");
+// Context imports
+import { useProperty } from '../../../context/filters/property';
 
-	const [ businessTypeId, setBusinessTypeId ] = useState(1);
-	const [ propertyTypeId, setPropertyTypeId ] = useState(1);
+export const Property = () => {
+	const  {
+		propertyName, setPropertyName,
+		businessName, setBusinessName,
+		businessTypeId, setBusinessTypeId,
+		propertyTypeId, setPropertyTypeId
+	} = useProperty();
 
 	const propertyDict: any = {
 		1: "apto",
