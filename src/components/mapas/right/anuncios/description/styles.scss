@@ -4,6 +4,7 @@
 	grid-template-columns: auto min-content;
 	grid-gap: 5px;
 	white-space: nowrap;
+	position: relative;
 }
 .pictures-description {
 	display: grid; 
@@ -32,4 +33,10 @@
     padding: 5px 10px;
     color: #fff;
     background-color: #081245;
+}
+.listing-cancel-cross {
+	position: absolute;
+	width: 12px;
+	top: 5px;
+	right: 0;
 }

@@ -6,7 +6,7 @@ import './styles.scss';
 import { useProperty } from '../../context/filters/property';
 
 export const Anuncios = () => {
-	const { currentId, setCurrentId, filterProperties } = useProperty();
+	const { currentId, setCurrentId, filterProperties, setRejectedIds } = useProperty();
 
 	return (
 		<div className="pictures-wrapper">
@@ -32,7 +32,7 @@ export const Anuncios = () => {
 									height="80"
 									style={{padding: "5px"}}
 								/>
-								<Description item={item} setCurrentId={setCurrentId}/>
+								<Description item={item} setCurrentId={setCurrentId} setRejectedIds={setRejectedIds}/>
 							</div>
 						</div>
 					)}

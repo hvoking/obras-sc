@@ -39,7 +39,9 @@ export const PropertyProvider = ({children}: any) => {
 		2: "locação",
 	}
 
-	const filterProperties = propertyDict.filter((item: any) => {
+	const filterById = propertyDict.filter((item: any) => !rejectedIds.includes(item.codigo));
+
+	const filterProperties = filterById.filter((item: any) => {
 	    const { dormitorios, suites: itemSuites, vagas } = item;
 
 	    return (
@@ -48,6 +50,8 @@ export const PropertyProvider = ({children}: any) => {
 	        (garages === null || garages === vagas)
 	    );
 	});
+
+
 
 	useEffect(() => {
 		setPropertyName(propertyTypeDict[propertyTypeId]);

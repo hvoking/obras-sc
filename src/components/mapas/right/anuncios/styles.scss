@@ -1,10 +1,9 @@
 .pictures-wrapper {
 	display: grid;
-	height: calc(100% - 5px);
+	height: min-content;
 	overflow-y: scroll;
 	padding-right: 5px;
 	padding-left: 5px;
-
 }
 .pictures {
 	display: grid;
