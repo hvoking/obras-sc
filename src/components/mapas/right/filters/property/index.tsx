@@ -1,6 +1,3 @@
-// React imports
-import { useState } from 'react';
-
 // App imports
 import { Rooms } from './rooms';
 import { Dropdown } from './dropdown';
@@ -10,22 +7,7 @@ import './styles.scss';
 import { useProperty } from '../../../context/filters/property';
 
 export const Property = () => {
-	const  {
-		propertyName, setPropertyName,
-		businessName, setBusinessName,
-		businessTypeId, setBusinessTypeId,
-		propertyTypeId, setPropertyTypeId
-	} = useProperty();
-
-	const propertyDict: any = {
-		1: "apto",
-		2: "casa",
-	}
-
-	const businessDict: any = {
-		1: "venda",
-		2: "locação",
-	}
+	const  { propertyName, businessName, setBusinessTypeId, setPropertyTypeId, propertyTypeDict, businessTypeDict } = useProperty();
 
 	return (
 		<div className="property-parameters">
@@ -33,7 +15,7 @@ export const Property = () => {
 				<div className="property-parameter">
 					<div>Tipo:</div>
 					<Dropdown
-						imoveisDict={propertyDict}
+						imoveisDict={propertyTypeDict}
 						propertyName={propertyName}
 						setPropertyTypeId={setPropertyTypeId}
 					/>
@@ -41,7 +23,7 @@ export const Property = () => {
 				<div className="property-parameter">
 					<div>Negócio:</div>
 					<Dropdown
-						imoveisDict={businessDict}
+						imoveisDict={businessTypeDict}
 						propertyName={businessName}
 						setPropertyTypeId={setBusinessTypeId}
 					/>
