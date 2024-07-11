@@ -1,4 +1,5 @@
-import { useProperty } from '../../../../../../mapas/context/filters/property';
+// Context imports
+import { useProperty } from '../../../../mapas/context/filters/property';
 
 // App imports
 import './styles.scss';

@@ -1,5 +1,5 @@
 // App imports
-import { Header } from './header';
+import { Filters } from './filters';
 import { Pictures } from './pictures';
 import { Description } from './description';
 import './styles.scss';
@@ -16,7 +16,7 @@ export const Listing = () => {
 
 	return (
 		<div className="airbnb-listing">
-			<Header/>
+			<Filters/>
 			<div className="airbnb-images-wrapper">
 				{filterProperties.map((item: any, index: any) => {
 					return (
