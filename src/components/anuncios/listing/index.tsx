@@ -8,7 +8,7 @@ import './styles.scss';
 import { useProperty } from '../../mapas/context/filters/property';
 
 export const Listing = () => {
-	const { setCurrentId, propertyDict } = useProperty();
+	const { setCurrentId, filterProperties } = useProperty();
 
 	const onMouseOver = (e: any, item: any) => {
 		setCurrentId(item.codigo);
@@ -18,7 +18,7 @@ export const Listing = () => {
 		<div className="airbnb-listing">
 			<Header/>
 			<div className="airbnb-images-wrapper">
-				{propertyDict.map((item: any, index: any) => {
+				{filterProperties.map((item: any, index: any) => {
 					return (
 						<div 
 							key={index} 

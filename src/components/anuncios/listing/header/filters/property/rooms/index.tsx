@@ -1,13 +1,14 @@
-// React imports
-import { useState } from 'react';
+import { useProperty } from '../../../../../../mapas/context/filters/property';
 
 // App imports
 import './styles.scss';
 
 export const Rooms = () => {
-	const [ rooms, setRooms ] = useState<any>(null);
-	const [ suites, setSuites ] = useState<any>(null);
-	const [ garages, setGarages ] = useState<any>(null);
+	const { 
+		rooms, setRooms,
+		suites, setSuites,
+		garages, setGarages
+	} = useProperty();
 
 	return (
 		<div className="property-parameter">

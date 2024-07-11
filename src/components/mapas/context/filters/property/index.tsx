@@ -15,6 +15,10 @@ export const useProperty = () => {
 export const PropertyProvider = ({children}: any) => {
 	const [ currentId, setCurrentId ] = useState<any>(null);
 
+	const [ rooms, setRooms ] = useState<any>(null);
+	const [ suites, setSuites ] = useState<any>(null);
+	const [ garages, setGarages ] = useState<any>(null);
+
 	const [ propertyName, setPropertyName ] = useState("apto");
 	const [ businessName, setBusinessName ] = useState("venda");
 
@@ -35,6 +39,16 @@ export const PropertyProvider = ({children}: any) => {
 		2: "locação",
 	}
 
+	const filterProperties = propertyDict.filter((item: any) => {
+	    const { dormitorios, suites: itemSuites, vagas } = item;
+
+	    return (
+	        (rooms === null || rooms === dormitorios) &&
+	        (suites === null || suites === itemSuites) &&
+	        (garages === null || garages === vagas)
+	    );
+	});
+
 	useEffect(() => {
 		setPropertyName(propertyTypeDict[propertyTypeId]);
 	}, [ propertyTypeId ]);
@@ -45,7 +59,7 @@ export const PropertyProvider = ({children}: any) => {
 	
 	return (
 		<PropertyContext.Provider value={{
-			currentId, setCurrentId, propertyDict,
+			currentId, setCurrentId, filterProperties,
 			propertyTypeDict, businessTypeDict,
 			propertyName, setPropertyName,
 			businessName, setBusinessName,
@@ -53,7 +67,10 @@ export const PropertyProvider = ({children}: any) => {
 			propertyTypeId, setPropertyTypeId,
 			nearest, setNearest,
 			samplesIds, setSamplesIds,
-			rejectedIds, setRejectedIds
+			rejectedIds, setRejectedIds,
+			rooms, setRooms,
+			suites, setSuites,
+			garages, setGarages
 		}}>
 			{children}
 		</PropertyContext.Provider>

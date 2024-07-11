@@ -6,12 +6,12 @@ import './styles.scss';
 import { useProperty } from '../../context/filters/property';
 
 export const Anuncios = () => {
-	const { currentId, setCurrentId, propertyDict } = useProperty();
+	const { currentId, setCurrentId, filterProperties } = useProperty();
 
 	return (
 		<div className="pictures-wrapper">
 			<div className="pictures">
-				{propertyDict.map((item: any, index: any) => {
+				{filterProperties.map((item: any, index: any) => {
 					return (
 						<div 
 							key={index} 

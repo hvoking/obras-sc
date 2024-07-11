@@ -20,7 +20,7 @@ export const useIconLayer = () => {
 
 export const IconLayerProvider = ({children}: any) => {
 	const { setPropertyHoverInfo, setPropertyInfo, setActivePropertyInfo } = useTooltip();
-	const { currentId, setCurrentId, propertyDict } = useProperty();
+	const { currentId, setCurrentId, filterProperties } = useProperty();
 
 	const onClick = (info: any) => {
   		setActivePropertyInfo(true);
@@ -40,7 +40,7 @@ export const IconLayerProvider = ({children}: any) => {
 	const iconLayer = 
 		new IconLayer({
 			id: 'property-icon',
-			data: propertyDict,
+			data: filterProperties,
 			pickable: true,
 			getPosition: (d: any) => d.coordinates.split(",").reverse().map((item: any) => parseFloat(item)),
 			iconAtlas,
