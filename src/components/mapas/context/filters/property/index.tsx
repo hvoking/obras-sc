@@ -29,6 +29,8 @@ export const PropertyProvider = ({children}: any) => {
 	const [ samplesIds, setSamplesIds ] = useState<any>([]);
 	const [ rejectedIds, setRejectedIds ] = useState<any>([]);
 
+	const [ sortKey, setSortKey ] = useState("valorVenda");
+
 	const propertyTypeDict: any = {
 		1: "apto",
 		2: "casa",
@@ -41,6 +43,8 @@ export const PropertyProvider = ({children}: any) => {
 
 	const filterById = propertyDict.filter((item: any) => !rejectedIds.includes(item.codigo));
 
+	filterById.sort((a: any, b: any) => a[sortKey] - b[sortKey])
+
 	const filterProperties = filterById.filter((item: any) => {
 	    const { dormitorios, suites: itemSuites, vagas } = item;
 
@@ -50,7 +54,6 @@ export const PropertyProvider = ({children}: any) => {
 	        (garages === null || garages === vagas)
 	    );
 	});
-
 
 
 	useEffect(() => {
@@ -74,7 +77,8 @@ export const PropertyProvider = ({children}: any) => {
 			rejectedIds, setRejectedIds,
 			rooms, setRooms,
 			suites, setSuites,
-			garages, setGarages
+			garages, setGarages,
+			sortKey, setSortKey
 		}}>
 			{children}
 		</PropertyContext.Provider>
