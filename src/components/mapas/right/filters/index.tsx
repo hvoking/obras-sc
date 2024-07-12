@@ -4,7 +4,7 @@ import { Dropdown } from './dropdown';
 import './styles.scss';
 
 // Context imports
-import { useProperty } from '../../context/filters/property';
+import { useProperty } from '../../../context/filters/property';
 
 export const Filters = () => {
 	const  { propertyName, businessName, setBusinessTypeId, setPropertyTypeId, propertyTypeDict, businessTypeDict } = useProperty();

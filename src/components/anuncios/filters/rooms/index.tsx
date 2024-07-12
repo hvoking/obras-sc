@@ -2,7 +2,7 @@
 import './styles.scss';
 
 // Context imports
-import { useProperty } from '../../../../mapas/context/filters/property';
+import { useProperty } from '../../../context/filters/property';
 
 export const Rooms = () => {
 	const {

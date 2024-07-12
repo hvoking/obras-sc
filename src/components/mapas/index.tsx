@@ -1,7 +1,7 @@
 // App imports
 import { MapContainer } from './maps';
 import { Right } from './right';
-import { Wrapper } from './wrapper';
+import { Wrapper } from '../wrapper';
 import './styles.scss';
 
 export const Mapas = () => {

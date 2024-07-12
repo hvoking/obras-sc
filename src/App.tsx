@@ -1,6 +1,6 @@
 // App imports
 import { AppRoutes } from './routes';
-import { MainProvider } from './components/mapas/context';
+import { MainProvider } from './components/context';
 import './styles.scss';
 
 export const App = () => {

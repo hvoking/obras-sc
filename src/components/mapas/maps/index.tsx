@@ -8,11 +8,11 @@ import { Search } from './search';
 import './styles.scss';
 
 // Context imports
-import { useMapbox } from '../context/mapbox';
-import { useGeo } from '../context/filters/geo';
+import { useMapbox } from '../../context/mapbox';
+import { useGeo } from '../../context/filters/geo';
 
 // Layers imports
-import { useIconLayer } from '../context/maps/layers/icon';
+import { useIconLayer } from '../../context/maps/layers/icon';
 
 // Third-party imports
 import { Map, useControl } from 'react-map-gl';
