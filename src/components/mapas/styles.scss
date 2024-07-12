@@ -4,10 +4,18 @@
   	background-color: rgba(240, 240, 240, 1);
   	display: grid;
   	grid-template-columns: auto 25%;
+  	position: relative;
 }
 @media screen and (max-width: 1000px) {
 	.mapas-wrapper {
 	  	grid-template-columns: auto;
-	  	grid-template-rows: 2fr 3fr;
+	  	grid-template-rows: calc(100vh - 60px - 100px);
+	}
+	.right {
+		position: absolute;
+		width: 100%;
+		top: calc(100vh - 60px - 100px);
+		left: 0;
+		z-index: 10;
 	}
 }
