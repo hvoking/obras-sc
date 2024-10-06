@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/obras/static/css/main.c2a40ec7.css",
+    "main.js": "/obras/static/js/main.a16301b5.js",
+    "static/js/879.5e96daeb.chunk.js": "/obras/static/js/879.5e96daeb.chunk.js",
+    "index.html": "/obras/index.html",
+    "main.c2a40ec7.css.map": "/obras/static/css/main.c2a40ec7.css.map",
+    "main.a16301b5.js.map": "/obras/static/js/main.a16301b5.js.map",
+    "879.5e96daeb.chunk.js.map": "/obras/static/js/879.5e96daeb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2a40ec7.css",
+    "static/js/main.a16301b5.js"
+  ]
+}
