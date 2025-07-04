@@ -6,7 +6,7 @@ import './styles.scss';
 import { useGeo } from 'context/filters/geo';
 
 // Third party imports
-import { NavigationControl } from 'react-map-gl';
+import { NavigationControl } from 'react-map-gl/mapbox';
 
 export const Controllers = () => {
 	const { viewport, setViewport, placeCoordinates } = useGeo();

@@ -13,7 +13,7 @@ import { useGeo } from 'context/filters/geo';
 import { useIconLayer } from 'context/maps/layers/icon';
 
 // Third-party imports
-import { Map, useControl } from 'react-map-gl';
+import { Map, useControl } from 'react-map-gl/mapbox';
 import { DeckProps } from '@deck.gl/core/typed';
 import { MapboxOverlay } from '@deck.gl/mapbox/typed';
 import 'mapbox-gl/dist/mapbox-gl.css';
