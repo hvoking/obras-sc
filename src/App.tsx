@@ -1,14 +1,14 @@
 // App imports
 import { AppRoutes } from './routes';
-import { MainProvider } from './components/context';
+import { ContextProvider } from 'context';
 import './styles.scss';
 
 export const App = () => {
   return (
-    <MainProvider>
+    <ContextProvider>
       <div className="App">
         <AppRoutes/>
       </div>
-    </MainProvider>
+    </ContextProvider>
   );
 }

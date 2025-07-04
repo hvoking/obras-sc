@@ -6,7 +6,7 @@ import { Arrow } from './arrow';
 import { Suggestions } from './suggestions';
 
 // Context imports
-import { useProperty } from '../../../context/filters/property';
+import { useProperty } from 'context/filters/property';
 
 export const Sort = () => {
 	const [ suggestionsActive, setSuggestionsActive ] = useState(false);

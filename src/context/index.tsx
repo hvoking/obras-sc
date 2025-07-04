@@ -5,7 +5,7 @@ import { MapboxProvider } from './mapbox';
 import { SizesProvider } from './sizes';
 import { MapsProvider } from './maps';
 
-export const MainProvider = ({children}: any) => {
+export const ContextProvider = ({children}: any) => {
   return (
     <FiltersProvider>
     <ApiProvider>
@@ -21,4 +21,4 @@ export const MainProvider = ({children}: any) => {
   )
 }
 
-MainProvider.displayName="MainProvider";
+ContextProvider.displayName="ContextProvider";
