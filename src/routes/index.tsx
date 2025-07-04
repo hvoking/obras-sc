@@ -1,6 +1,6 @@
 // Routes
-import { Anuncios } from 'components/anuncios';
-import { Mapas } from 'components/mapas';
+import { Anuncios } from 'app/anuncios';
+import { Mapas } from 'app/mapas';
 
 // Third party imports
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
